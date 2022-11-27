@@ -1,0 +1,13 @@
+{
+    "invalid_packet_kick": "Invalid packet received",
+    "invalid_position_kick": "Invalid position",
+    "invalid_name_kick": "Please use another username",
+    "name_taken_kick": "Someone is already playing with this username. Please select another username.",
+    "banned_kick": "You are banned from this server",
+    "internal_server_error_kick": "Internal server error",
+    "server_stop_kick": "Server closed",
+    "broadcast_join": "PLAYER joined the game",
+    "broadcast_leave": "PLAYER left the game",
+    "world_saved": "World saved",
+    "banlist_saved": "Banlist saved"
+}

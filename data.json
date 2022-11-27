@@ -1,0 +1,95 @@
+{
+    "note": "This file is used by netcraft.js for some actions",
+    "non_solid_blocks": [
+        "WATER",
+        "LAVA",
+        "FIRE",
+        "SAPLING",
+        "SEEDS",
+        "WHEAT",
+        "RED_FLOWER",
+        "YELLOW_FLOWER",
+        "LEAVES"
+    ],
+    "unbreakable_blocks": [
+        "BEDROCK"
+    ],
+    "override_block_items": {
+        "COAL_ORE": "p.selectedItem && p.selectedItem.item.endsWith('PICKAXE') ? new ItemStack('COAL') : null",
+        "DIAMOND_ORE": "p.selectedItem && ['IRON_PICKAXE', 'DIAMOND_PICKAXE'].includes(p.selectedItem.item) ? new ItemStack('DIAMOND') : null",
+        "IRON_ORE": "p.selectedItem && ['STONE_PICKAXE', 'IRON_PICKAXE', 'DIAMOND_PICKAXE'].includes(p.selectedItem.item) ? new ItemStack('IRON_ORE') : null",
+        "GOLD_ORE": "p.selectedItem && ['IRON_PICKAXE', 'DIAMOND_PICKAXE'].includes(p.selectedItem.item) ? new ItemStack('GOLD_ORE') : null",
+        "STONE": "p.selectedItem && p.selectedItem.item.endsWith('PICKAXE') ? new ItemStack('COBBLESTONE') : null",
+        "WATER": "p.selectedItem && p.selectedItem.item == 'BUCKET' ? (() => {let i = new ItemStack('WATER_BUCKET', 1);p.removeItem('BUCKET');return i;})() : false",
+        "LAVA": "p.selectedItem && p.selectedItem.item == 'BUCKET' ? (() => {let i = new ItemStack('LAVA_BUCKET', 1);p.removeItem('BUCKET');return i;})() : false",
+        "GRASS_BLOCK": "p.selectedItem && p.selectedItem.item.endsWith('SHOVEL') ? new ItemStack('GRASS_BLOCK') : new ItemStack('DIRT')",
+        "FIRE": "null"
+    },
+    "override_block_placement": {
+        "WATER_BUCKET": ["new Block(x, y, 'WATER')", "p.removeItem('WATER_BUCKET');p.giveItem(new ItemStack('BUCKET', 1));"],
+        "LAVA_BUCKET": ["new Block(x, y, 'LAVA')", "p.removeItem('LAVA_BUCKET');p.giveItem(new ItemStack('BUCKET', 1));"],
+        "FLINT_AND_STEEL": ["new Block(x, y, 'FIRE')", "'0'"]
+    },
+    "damage_when_intersect_blocks": [
+        "FIRE",
+        "LAVA"
+    ],
+    "death_messages": {
+        "damage_when_intersect_blocks": {
+            "LAVA": "%player% решил поплавать в лаве (это тебе не Чёрное море)",
+            "FIRE": "%player% стал шашлыком"
+        },
+        "fight": "%player% был убит %fighter%",
+        "fight_2": "%player% был убит %fighter% предметом %item%",
+        "script": "%player% сдох по сценарию"
+    },
+    "blocks": [
+        "GRASS_BLOCK",
+        "SNOWY_GRASS_BLOCK",
+        "DIRT",
+        "STONE",
+        "BEDROCK",
+        "COBBLESTONE",
+        "WATER",
+        "WATER_BUCKET",
+        "WOOD",
+        "PLANKS",
+        "LEAVES",
+        "COAL_ORE",
+        "IRON_ORE",
+        "IRON_BLOCK",
+        "GOLD_ORE",
+        "GOLD_BLOCK",
+        "DIAMOND_ORE",
+        "DIAMOND_BLOCK",
+        "OBSIDIAN",
+        "SAND",
+        "GLASS",
+        "FURNACE",
+        "SAPLING",
+        "TNT",
+        "LAVA",
+        "LAVA_BUCKET",
+        "CHEST",
+        "END_STONE",
+        "FIRE",
+        "NETCRAFT_BLOCK",
+        "SNOWY_NETCRAFT_BLOCK",
+        "SEEDS",
+        "WHEAT",
+        "RED_FLOWER",
+        "YELLOW_FLOWER",
+        "GRAVEL",
+        "FLINT_AND_STEEL",
+        "MARSEL_GLASSES",
+        "BRICKS",
+        "STONEBRICK",
+        "CLAY"
+    ],
+    "damage_multipliers": {
+        "WOODEN_SWORD": 2,
+        "STONE_SWORD": 3,
+        "IRON_SWORD": 6,
+        "DIAMOND_SWORD": 10
+    }
+}

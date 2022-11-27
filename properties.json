@@ -1,0 +1,9 @@
+{
+    "max_players": 20,
+    "chat_format": "<PLAYER> MESSAGE",
+    "everybody_admin": true,
+    "motd": "Welcome to Netcraft.js",
+    "name": "A netcraft.js server",
+    "enable_internal_anticheat": true,
+    "port": 6545
+}
